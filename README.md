@@ -8,6 +8,7 @@ DS emulator with WiFi support
 - ./autogen.sh
 - ./configure --enable-glx --enable-openal --enable-glade --enable-wifi
 - make
+- cd gtk
 
 After compilation of the project, run the following command to use the libpcap functions in standard user mode :
 - sudo setcap cap_net_raw,cap_net_admin=eip ./desmume
