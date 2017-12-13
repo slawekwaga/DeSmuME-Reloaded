@@ -1,0 +1,65 @@
+                        DeSmuME
+
+DeSmuME is written in C++ using the GTK+ and SDL libraries.
+
+* http://www.gtk.org
+* http://www.libsdl.org/
+
+DeSmuME provides another interface based on libglade, to use
+, you'll need glade:
+
+* http://glade.gnome.org/
+
+To build, first cd to src/frontend/posix and then run `./autogen.sh`
+
+This will create the file `configure`. 
+It does this using the packages `autoconf` and `automake`.
+It also requires `libglib2.0-dev` to generate correctly. 
+(`glib` from the AUR if building on Arch)
+
+Run this using `./configure`
+
+Then build the program by running `make`
+
+It will generate three programs:
+1) "desmume" in the "gtk" directory;
+2) "desmume-cli" in the "cli" directory.
+
+If glade is installed on your system, you'll get a third
+binary:
+
+3) "desmume-glade" in the "gtk-glade" directory.
+
+You can even type "make install" to install those programs on
+your system (in /usr/local/ by default); then uninstalling is
+done by typing "make uninstall".
+
+For more information on the available commandline options, 
+check the other README files which will be more up to date.
+
+The following options specially are available on these posix ports:
+
+--disable-limiter   Disables the 60 fps limiter
+--soft-convert      Use software colour conversion during OpenGL
+                    screen rendering. May produce better or worse
+                    frame rates depending on hardware.
+
+The following options specially are available on the Gtk+ port:
+
+--opengl-2d         Enables using OpenGL for screen rendering
+--disable-sound     Disables the sound emulation
+--disable-3d        Disables the 3D emulation
+
+The following options specially are available on the CLI port:
+
+--opengl-2d         Enables using OpenGL for screen rendering
+--disable-sound     Disables the sound emulation
+
+NOTE:
+The Gtk+ and Glade builds use gtkGLext to handle the OpenGL
+rendering and contexts. You may get improved performance by
+also passing the argument --gdk-gl-force-indirect. This has
+been seen to improve things for Nvidia based graphics cards
+under Linux.
+
+Visit us on the web at http://www.desmume.org

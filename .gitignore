@@ -1,0 +1,72 @@
+/desmume/src/scmrev.h
+/desmume/src/frontend/windows/defaultconfig/scmrev.h
+/desmume/src/frontend/windows/.libs
+/desmume/src/frontend/windows/.obj
+/desmume/src/frontend/windows/__bins
+/desmume/src/frontend/windows/*.tlog
+/desmume/src/frontend/windows/*.aps
+*.user
+*.suo
+*.VC.db
+*.o
+.deps
+*.dirstamp
+Makefile.in
+/desmume/src/frontend/posix/missing
+/desmume/src/frontend/posix/*.a
+/desmume/src/frontend/posix/autom4te.cache
+/desmume/src/frontend/posix/Makefile
+/desmume/src/frontend/posix/aclocal.m4
+/desmume/src/frontend/posix/configure
+/desmume/src/frontend/posix/cli/Makefile
+/desmume/src/frontend/posix/cli/desmume-cli
+/desmume/src/frontend/posix/cli/doc/Makefile
+/desmume/src/frontend/posix/compile
+/desmume/src/frontend/posix/config.guess
+/desmume/src/frontend/posix/config.log
+/desmume/src/frontend/posix/config.status
+/desmume/src/frontend/posix/config.sub
+/desmume/src/frontend/posix/depcomp
+/desmume/src/frontend/posix/gtk/Makefile
+/desmume/src/frontend/posix/gtk/desmume
+/desmume/src/frontend/posix/gtk/doc/Makefile
+/desmume/src/frontend/posix/gtk-glade/Makefile
+/desmume/src/frontend/posix/gtk-glade/desmume-glade
+/desmume/src/frontend/posix/gtk-glade/doc/Makefile
+/desmume/src/frontend/posix/install-sh
+/desmume/src/frontend/cocoa/openemu/OpenEmuBase.framework/
+/desmume/src/frontend/cocoa/OptimizationProfiles/
+
+# Xcode
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Eclipse CDT generated files
+/.autotools
+/.cproject
+/config.log
+/.project
