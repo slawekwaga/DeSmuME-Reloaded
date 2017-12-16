@@ -426,7 +426,9 @@ bool CommandLine::parse(int argc,char **argv)
 	//TODO NOT MAX PRIORITY! change ARM9BIOS etc to be a std::string
 	if(_bios_arm9) { CommonSettings.UseExtBIOS = true; strcpy(CommonSettings.ARM9BIOS,_bios_arm9); }
 	if(_bios_arm7) { CommonSettings.UseExtBIOS = true; strcpy(CommonSettings.ARM7BIOS,_bios_arm7); }
-	if(_fw_path) { CommonSettings.UseExtFirmware = true; CommonSettings.UseExtFirmwareSettings = true; strcpy(CommonSettings.Firmware,_fw_path); }
+	#ifndef HOST_WINDOWS 
+		if(_fw_path) { CommonSettings.UseExtFirmware = true; CommonSettings.UseExtFirmwareSettings = true; strcpy(CommonSettings.Firmware,_fw_path); } 
+	#endif
 	if(_fw_boot) CommonSettings.BootFromFirmware = true;
 	if(_bios_swi) CommonSettings.SWIFromBIOS = true;
 	if(_spu_sync_mode != -1) CommonSettings.SPU_sync_mode = _spu_sync_mode;

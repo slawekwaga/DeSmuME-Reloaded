@@ -23,6 +23,8 @@ Example for using DeSmuME after all these steps :
 
 # History
 
+16-Dec-2017 : Fourth version with WiFi support working with DWC project on Linux and Windows versions
+
 13-Dec-2017 : Third version with WiFi support working with DWC project
 - Desmume version 0.9.12 svn
 - Firmware can be set via command-line
