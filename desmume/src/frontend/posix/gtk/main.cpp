@@ -458,7 +458,7 @@ static const GtkToggleActionEntry toggle_entries[] = {
     { "view_toolbar", NULL, "Show _toolbar", NULL, NULL, G_CALLBACK(ToggleToolbarVisible), TRUE},
     { "view_statusbar", NULL, "Show _statusbar", NULL, NULL, G_CALLBACK(ToggleStatusbarVisible), TRUE},
     { "orient_swapscreens", NULL, "S_wap screens", "space", NULL, G_CALLBACK(ToggleSwapScreens), FALSE},
-    { "fullscreen", NULL, "_Fullscreen", "F11", NULL, G_CALLBACK(ToggleFullscreen), FALSE},
+    { "fullscreen", NULL, "_Fullscreen", "F12", NULL, G_CALLBACK(ToggleFullscreen), FALSE},
 };
 
 static const GtkRadioActionEntry pri_interpolation_entries[] = {
@@ -861,9 +861,9 @@ static void ToggleMenuVisible(GtkToggleAction *action)
 
     config.view_menu = gtk_toggle_action_get_active(action);
     if (config.view_menu)
-      gtk_widget_show(pMenuBar);
+		gtk_widget_show(pMenuBar);
     else
-      gtk_widget_hide(pMenuBar);
+		gtk_widget_hide(pMenuBar);
 }
 
 static void ToggleToolbarVisible(GtkToggleAction *action)
@@ -872,9 +872,9 @@ static void ToggleToolbarVisible(GtkToggleAction *action)
 
     config.view_toolbar = gtk_toggle_action_get_active(action);
     if (config.view_toolbar)
-      gtk_widget_show(pToolBar);
+		gtk_widget_show(pToolBar);
     else
-      gtk_widget_hide(pToolBar);
+		gtk_widget_hide(pToolBar);
 }
 
 static void ToggleStatusbarVisible(GtkToggleAction *action)
@@ -3304,6 +3304,15 @@ common_gtk_main( class configured_features *my_config)
 
     /* Creating the place for showing DS screens */
     pDrawingArea = gtk_drawing_area_new();
+    
+    GdkColor color;
+
+	color.red = 0x0000;
+	color.green = 0x0000;
+	color.blue = 0x0000;
+
+	gtk_widget_modify_bg(pDrawingArea, GTK_STATE_NORMAL, &color);
+    
     gtk_container_add (GTK_CONTAINER (pVBox), pDrawingArea);
 
     gtk_widget_set_events(pDrawingArea,
