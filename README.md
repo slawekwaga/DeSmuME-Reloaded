@@ -35,6 +35,8 @@ Place your bios files in the System/Bios directory of your RetroArch setup, and 
 - ARM9 filename : NDS-bios-ARM9.bin ( originally named biosnds9.bin on the Web )
 - Firmware filename : NDS-bios-Firmware.bin ( originally named firmware.bin on the Web )
 
+To use this core on RetroArch, you can use this command line :
+- /your_path_of_the_retroarch_bin_directory/retroarch -L /your_path_of_the_core_directory/desmume_libretro.so Your-Game.nds
 
 
 # SETUP FOR WINDOWS
