@@ -1,7 +1,6 @@
 # DeSmuME-Reloaded
 
-DS emulator with WiFi support
-Author : JackoboLeChocobo
+DS emulator with WiFi support === Author : JackoboLeChocobo
 
 # SETUP FOR LINUX
 
