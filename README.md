@@ -18,7 +18,7 @@ Example for using DeSmuME after all these steps :
 - desmume --bios-arm9 "/home/test/Documents/MyBios/biosnds9.bin" --bios-arm7 "/home/test/Documents/MyBios/biosnds7.bin" --firmware-path "/home/test/Documents/MyBios/firmware.bin" --firmware-boot 1
 
 
-DeSmuME RetroArch Version :
+DeSmuME RetroArch Version (64-bit version) :
 - cd desmume-libretro
 - make -f Makefile.libretro
 
