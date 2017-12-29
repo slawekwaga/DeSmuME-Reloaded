@@ -16,8 +16,13 @@ DeSmuME Classic Version :
 After compilation of the project, run the following command to use the libpcap functions in standard user mode :
 - sudo setcap cap_net_raw,cap_net_admin=eip ./desmume
 
+Place your bios files in the Bios directory of your choice :
+- ARM7 filename : biosnds7.bin
+- ARM9 filename : biosnds9.bin
+- Firmware filename : firmware.bin
+
 Example for using DeSmuME after all these steps :
-- desmume --bios-arm9 "/home/test/Documents/MyBios/biosnds9.bin" --bios-arm7 "/home/test/Documents/MyBios/biosnds7.bin" --firmware-path "/home/test/Documents/MyBios/firmware.bin" --firmware-boot 1
+- desmume --bios-arm9 "/your_path_of_the_bios_directory/biosnds9.bin" --bios-arm7 "/your_path_of_the_bios_directory/biosnds7.bin" --firmware-path "/your_path_of_the_bios_directory/firmware.bin" --firmware-boot 1
 
 
 DeSmuME RetroArch Version (64-bit version) :
