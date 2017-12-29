@@ -2,6 +2,8 @@
 
 DS emulator with WiFi support === Author : JackoboLeChocobo
 
+
+
 # SETUP FOR LINUX
 
 DeSmuME Classic Version :
@@ -24,6 +26,17 @@ DeSmuME RetroArch Version (64-bit version) :
 
 A file named "desmume-libretro.so" will be created. Place it in the core directory of your RetroArch setup.
 
+After that, run the followings command to use the libpcap functions in standard user mode :
+- sudo setcap cap_net_raw,cap_net_admin=eip /your_path_of_the_core_directory/desmume-libretro.so
+- sudo setcap cap_net_raw,cap_net_admin=eip /your_path_of_the_retroarch_bin_directory/retroarch
+
+Place your bios files in the System/Bios directory of your RetroArch setup, and in the Core Options choose Yes for "Use Bios Files" if you want to use the WiFi and restart RetroArch :
+- ARM7 filename : NDS-bios-ARM7.bin ( originally named biosnds7.bin on the Web )
+- ARM9 filename : NDS-bios-ARM9.bin ( originally named biosnds9.bin on the Web )
+- Firmware filename : NDS-bios-Firmware.bin ( originally named firmware.bin on the Web )
+
+
+
 # SETUP FOR WINDOWS
 
 DeSmuME Classic Version :
@@ -33,14 +46,16 @@ DeSmuME Classic Version :
 
 
 DeSmuME RetroArch Version :
-Not tested now
+- Not tested now
 
 # TODO
 
 - See for useful ameliorations to add on my DeSmuME version ( bug fixes and suggestions are welcome)
-- Collaboration with StapleButter (MelonDS developper) and other people to add WiFi local support
+- Collaboration with StapleButter (MelonDS developper) and other people to add WiFi local support ( 
 
 # History
+
+29-Dec-2017 : Add libretro (RetroArch) support (64-bit version) 
 
 16-Dec-2017 : Fourth version with WiFi support working with DWC project on Linux and Windows versions
 
