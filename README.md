@@ -4,6 +4,7 @@ DS emulator with WiFi support
 
 # SETUP FOR LINUX
 
+DeSmuME Classic Version :
 - cd desmume/src/frontend/posix
 - ./autogen.sh
 - ./configure --enable-glx --enable-openal --enable-glade --enable-wifi
@@ -16,11 +17,21 @@ After compilation of the project, run the following command to use the libpcap f
 Example for using DeSmuME after all these steps :
 - desmume --bios-arm9 "/home/test/Documents/MyBios/biosnds9.bin" --bios-arm7 "/home/test/Documents/MyBios/biosnds7.bin" --firmware-path "/home/test/Documents/MyBios/firmware.bin" --firmware-boot 1
 
+DeSmuME RetroArch Version :
+- cd desmume-libretro
+- make -f Makefile.libretro
+
+A file named "desmume-libretro.so" will be created. Place it in the core directory of your RetroArch setup.
+
 # SETUP FOR WINDOWS
 
+DeSmuME Classic Version :
 - Download WinPcap here : https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe
 - Open the file "desmume\src\frontend\windows\DeSmuME.sln" in Microsoft Visual Studio ( tested for me on 2015 version )
 - Build a Release project (tested for me a build of x64 version)
+
+DeSmuME RetroArch Version :
+Not tested now
 
 # TODO
 
